@@ -1,0 +1,111 @@
+.post__media
+	position: relative
+	min-height: 100px
+	a
+		display: block
+		overflow: hidden
+		&:hover
+			> img
+				transform: scale(1.1)
+		> img
+			+trans1
+.post__date
+	background-color: $white
+	width: 100px
+	height: 100px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 0
+	left: 0
+	color: $brownish-grey
+	background-color: $light
+.post__date-day
+	display: block
+	font-size: 24px
+	line-height: 1
+.post__date-month
+	display: block
+	text-transform: uppercase
+.post__meta
+	margin-top: 30px
+	margin-bottom: 10px
+	font-size: 12px
+.post-meta
+	+reset-ul
+	li
+		display: inline-flex
+		align-items: center
+		&:not(:last-child):after
+			content: '/'
+			color: $very-light-pink
+			display: inline-block
+			margin-left: 6px
+			margin-right: 5px
+.post__header
+	h2
+		font-size: 24px
+		font-weight: 600
+		line-height: 1.5
+		margin-top: 12px
+		margin-bottom: 12px
+		a
+			color: $dark
+			&:hover
+				color: $pale-brown
+.post__content
+	margin-bottom: 50px
+	a
+		border-bottom: 1px solid $links
+		&:hover
+			border-color: $mocha
+	> *:first-of-child
+		margin-top: 0
+	p
+		margin-top: 0
+		color: $brownish-grey
+	ul, ol
+		+reset-ul
+		// color: $brownish-grey
+		margin-bottom: 24px
+		li
+			display: block
+			margin-top: 12px
+			margin-bottom: 12px
+		ul, ol
+			padding-left: 16px
+	ul
+		li
+			&:before
+				content: ''
+				display: inline-block
+				width: 4px
+				height: 4px
+				vertical-align: middle
+				margin-right: 8px
+				margin-bottom: 3px
+				background-color: $pale-brown
+	ol
+		counter-reset: list
+		li
+			&:before
+				counter-increment: list
+				content: counter(list) '. '
+	img
+		margin-top: 12px
+		margin-bottom: 36px
+.post__tags
+	padding-top: 30px
+	border-top: 1px solid $borders
+
+
+@media only screen and (max-width: 991px)
+	.post__date
+		width: 60px
+		height: 60px
+	.post__date-day
+		font-size: 16px
+	.post__date-month
+		font-size: 12px

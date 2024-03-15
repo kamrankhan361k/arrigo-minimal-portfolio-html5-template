@@ -1,0 +1,165 @@
+.slider__arrow
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: 80px
+	height: 80px
+	+material-icons
+	font-size: 24px
+	color: $brown-grey
+	cursor: pointer
+	+trans1
+	outline: none
+	&:hover
+		background-color: $light
+		color: $pale-brown
+
+.slider__arrows
+	margin-left: -36px
+	margin-top: 20px
+	margin-bottom: 20px
+
+.slider__counter
+	+small-caps
+	color: $brown-grey
+	height: 12px
+.slider__counter_current
+	color: $pale-brown
+	margin-right: 30px
+.slider__counter_total
+	margin-left: 30px
+
+.slider__progress
+	display: inline-flex
+	align-items: center
+	margin-top: 20px
+	margin-bottom: 20px
+.slider__progressbar, .swiper-pagination-progressbar.slider__progressbar
+	position: relative
+	width: 160px
+	height: 2px
+	background: $very-light-pink
+.slider__progressbar-fill
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+	background-color: $pale-brown
+	transform-origin: left center
+	+trans1
+.slider__controls
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+.slider__dot
+	position: relative
+	width: 18px
+	height: 18px
+	margin: 16px 0
+	cursor: pointer
+	outline: none
+	&:before
+		content: ''
+		display: block
+		width: 4px
+		height: 4px
+		border-radius: 100%
+		background-color: $brown-grey
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
+		+trans1
+	&:after
+		content: ''
+		display: block
+		border-radius: 100%
+		border: 1px solid $brown-grey
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		transform: scale(0)
+		+trans1
+	&:hover
+		&:after
+			transform: scale(1)
+.slider__dot_active
+	&:before
+		background-color: $pale-brown
+	&:after
+		transform: scale(1)
+		border-color: $pale-brown
+.slider__counter-big
+	position: relative
+	width: 70px
+	height: 70px
+	margin-bottom: 10px
+	&:after
+		content: ''
+		width: 1px
+		height: 70px
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		background-color: $borders
+		transform: skew(-45deg)
+.slider__counter-big-current
+	position: absolute
+	height: 36px
+	top: -20px
+	left: -10px
+	font-size: 36px
+	font-weight: 300
+	line-height: 1
+.slider__counter-big-total
+	position: absolute
+	bottom: -4px
+	right: -2px
+	font-size: 14px
+	font-weight: 300
+	line-height: 1
+	color: $brown-grey
+.slider__dots, .slider__dots.swiper-pagination-bullets
+	width: auto
+
+@media only screen and (max-width: 1400px)
+	.slider__arrows
+		margin-top: 0
+		margin-bottom: 0
+
+@media only screen and (max-width: 991px)
+	.slider__arrow
+		width: 50px
+		height: 50px
+		font-size: 20px
+	.slider__arrows
+		margin-left: -20px
+	.slider__counter_current
+		margin-right: 15px
+	.slider__counter_total
+		margin-left: 15px
+	.slider__progressbar, .swiper-pagination-progressbar.slider__progressbar
+		width: 100px
+	.slider__controls
+		flex-direction: row
+		margin-top: 16px
+	.slider__dot
+		margin: 0 8px
+	.slider__dots
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 100%
+	.slider__counter-big
+		margin-left: auto
+		margin-right: auto
+		margin-top: 100px

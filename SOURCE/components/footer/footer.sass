@@ -1,0 +1,42 @@
+.footer
+	position: relative
+	color: $brown-grey
+	z-index: 50
+	small
+		font-size: 14px
+	.logo
+		color: $brownish-grey
+.footer_fixed
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	.footer__inner
+		border-top: none
+		padding: 0
+	.social
+		z-index: 500
+.footer__inner
+	border-top: 1px solid $borders
+	padding: 35px 0
+
+@media only screen and (max-width: 991px)
+	.footer
+		small
+			font-size: 12px
+		.slider__arrows
+			margin-left: 0
+			margin-right: 0
+			width: 100%
+			display: flex
+			justify-content: center
+	.footer_fixed
+		position: relative
+		background-color: $dark
+		padding: 15px 0
+	.footer__column
+		text-align: center !important
+		margin-top: 10px
+		margin-bottom: 10px
+	.footer__inner
+		padding: 20px 0

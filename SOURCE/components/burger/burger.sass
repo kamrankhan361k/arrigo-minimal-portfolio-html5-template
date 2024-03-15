@@ -1,0 +1,60 @@
+.burger
+	display: inline-block
+	position: relative
+	width: 40px
+	height: 40px
+	vertical-align: middle
+	cursor: pointer
+	z-index: 500
+	&:hover
+		.burger__line
+			background-color: $mocha
+			&:nth-of-type(1)
+				transform: scaleX(1)
+			&:nth-of-type(2)
+				transform: scaleX(0.75)
+			&:nth-of-type(3)
+				transform: scaleX(1)
+.burger_opened, .burger_opened:hover
+	.burger__line
+		&:nth-of-type(1)
+			transform: scaleX(1) rotate(45deg) translate(13px, 20px)
+		&:nth-of-type(2)
+			transform: scaleX(0)
+		&:nth-of-type(3)
+			transform: scaleX(1) rotate(-45deg) translate(14px, -21px)
+.burger__line
+	position: absolute
+	width: 100%
+	height: 2px
+	background-color: $pale-brown
+	+trans1
+	&:nth-of-type(1)
+		top: 9px
+		left: 0
+		transform-origin: right center
+		transform: scaleX(0.75)
+	&:nth-of-type(2)
+		top: 0
+		left: 0
+		bottom: 0
+		margin: auto
+		transform-origin: left center
+	&:nth-of-type(3)
+		bottom: 9px
+		left: 0
+		transform-origin: right center
+		transform: scaleX(0.75)
+
+@media only screen and (max-width: 991px)
+	.burger
+		width: 30px
+		height: 35px
+	.burger_opened, .burger_opened:hover
+		.burger__line
+			&:nth-of-type(1)
+				transform: scaleX(1) rotate(45deg) translate(10px, 15px)
+			&:nth-of-type(2)
+				transform: scaleX(0)
+			&:nth-of-type(3)
+				transform: scaleX(1) rotate(-45deg) translate(11px, -16px)

@@ -1,0 +1,65 @@
+.figure-feature
+	display: block
+	text-align: center
+	width: 100%
+	height: 100%
+	&:hover
+		.figure-feature__icon
+			color: $pale-brown
+		.figure-feature__headline
+			width: 50px
+		.figure-feature__header
+			h3
+				color: $pale-brown
+.figure-feature__icon
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: 150px
+	height: 150px
+	border-radius: 100%
+	border: 1px solid $borders
+	color: $brown-grey
+	font-size: 48px
+	svg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin: auto
+		width: 150px
+		height: 150px
+		stroke: $borders
+		stroke-width: 1px
+		z-index: 50
+.figure-feature__header
+	h3
+		color: $brownish-grey
+		margin-top: 16px
+		margin-bottom: 16px
+		+trans1
+	p
+		color: $brown-grey
+		margin-top: 16px
+		margin-bottom: 16px
+.figure-feature__headline
+	display: inline-block
+	width: 30px
+	height: 1px
+	background-color: $pale-brown
+	margin-top: 30px
+	margin-bottom: 0
+	+trans1
+
+
+@media only screen and (max-width: 991px)
+	.figure-feature__headline
+		margin-top: 20px
+	.figure-feature__header
+		h3
+			margin-top: 8px
+			margin-bottom: 8px
+		p
+			margin-top: 8px
+			margin-bottom: 8px

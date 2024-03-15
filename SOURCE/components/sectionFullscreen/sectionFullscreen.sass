@@ -1,0 +1,73 @@
+.section-fullscreen
+	height: 100vh
+.section-fullscreen__curtains
+	display: flex
+	align-items: center
+	justify-content: space-between
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 999
+	overflow: hidden
+.section-fullscreen__backgrounds
+	display: flex
+	align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+	overflow: hidden
+.section-fullscreen__curtain
+	flex: 1 1 auto
+	height: 100%
+	background-color: $light
+.section-fullscreen__wrapper-logo
+	display: inline-block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+.section-fullscreen__logo
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	width: 300px
+	height: 150px
+	outline: 2px solid $borders
+	outline-offset: -2px
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		stroke-width: 3px
+.section-fullscreen__inner-bg
+	height: 100%
+	&:nth-of-type(1)
+		flex: 0 1 29%
+	&:nth-of-type(2)
+		flex: 0 1 calc(71% - 80px)
+		width: calc(71% - 80px)
+		margin-top: 520px
+		height: 100%
+.slider-fullscreen__controls
+	justify-content: center !important
+
+@media only screen and (max-width: 1400px)
+	.section-fullscreen__inner-bg
+		&:nth-of-type(2)
+			flex: 0 1 calc(71% - 50px)
+			width: calc(71% - 50px)
+			margin-top: 360px
+
+@media only screen and (max-width: 991px)
+	.section-fullscreen
+		height: auto
+	.section-fullscreen__backgrounds
+		display: none

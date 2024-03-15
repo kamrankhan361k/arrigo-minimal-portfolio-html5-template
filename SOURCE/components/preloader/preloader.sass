@@ -1,0 +1,57 @@
+.preloader
+	display: flex
+	align-items: center
+	justify-content: space-between
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 999
+	overflow: hidden
+	&.bg-dark, &.bg-black
+		.preloader__curtain
+			background-color: $black
+	&.bg-light, &.bg-white
+		.preloader__curtain
+			background-color: $light
+.preloader__backgrounds
+	display: flex
+	align-items: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+	overflow: hidden
+.preloader__curtain
+	flex: 1 1 auto
+	height: 100%
+.preloader__wrapper-logo
+	display: inline-block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+.preloader__logo
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	width: 290px
+	height: 145px
+	outline: 2px solid $borders
+	outline-offset: -2px
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		stroke-width: 3px
+
+@media only screen and (max-width: 991px)
+	.preloader__logo
+		width: 220px
+		height: 110px

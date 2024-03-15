@@ -1,0 +1,115 @@
+.header
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 500
+	padding: 35px 0
+	transition: all 0.6s ease
+	will-change: padding, box-shadow, background-color
+	box-shadow: 0px 0px 30px 0px transparent
+	background-color: transparent
+.header_fixed
+	position: fixed
+.header_light
+	.menu > li > a, .logo
+		color: $white
+		&:hover
+			color: $pale-brown
+	.sub-menu
+		background-color: $black
+		> li > a
+			color: $white
+			&:hover
+				color: $pale-brown
+	.header__wrapper-overlay-menu
+		background-color: $black
+	.overlay-menu > li > a
+		color: $very-light-pink
+	.overlay-sub-menu > li > a
+		color: $very-light-pink
+	&.header_sticky
+		background-color: $black
+.header_sticky
+	position: fixed
+	transform: translateY(-1px)
+	padding: 5px 0
+	box-shadow: 0px 0px 30px 0px rgba(136, 136, 136, 0.08)
+.header_dark
+	.menu > li > a, .logo
+		color: $brown-grey
+	.sub-menu
+		background-color: $white
+		> li > a
+			color: $brown-grey
+	.header__wrapper-overlay-menu
+		background-color: $light
+	.overlay-menu > li > a
+		color: $brown-grey
+	.overlay-sub-menu > li > a
+		color: $brown-grey
+	&.header_sticky
+		background-color: $white
+.header_logo-dark
+	.logo
+		color: $brownish-grey
+.header__wrapper-overlay-menu
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	position: fixed
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	z-index: 50
+	padding: 50px 80px
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+.header__overlay-menu-back
+	position: absolute
+	top: 40px
+	left: 0
+	right: 0
+	margin: auto
+	display: flex
+	justify-content: center
+	align-items: center
+	+material-icons
+	font-size: 24px
+	width: 50px
+	height: 50px
+	cursor: pointer
+	color: $brown-grey
+	border: 1px solid $borders
+	z-index: 500
+
+@media only screen and (max-width: 1400px)
+	.header
+		padding: 20px 0
+	.header_sticky
+		padding: 15px 0
+	.header__overlay-menu-back
+		top: 20px
+
+@media only screen and (max-width: 991px)
+	.header
+		padding: 15px 0
+	.header_sticky
+		padding: 10px 0
+	.header__overlay-menu-back
+		top: 16px
+		width: 35px
+		height: 35px
+		font-size: 22px
+	.header__wrapper-overlay-menu
+		padding: 80px 15px
+
+@media only screen and (max-width: 576px)
+	.header__wrapper-overlay-menu
+		justify-content: flex-start

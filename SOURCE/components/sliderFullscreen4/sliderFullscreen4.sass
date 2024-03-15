@@ -1,0 +1,100 @@
+.slider-fullscreen4
+	height: 100%
+	.swiper-slide:not(:last-of-type)
+		.slider-fullscreen4__slide-wrapper-bg
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				display: block
+				width: 1px
+				height: 100%
+				background-color: $borders-light
+				z-index: 50
+.slider-fullscreen4_light
+	.overlay
+		background-color: $white
+	.slider-fullscreen4__slide-header
+		color: $brownish-grey
+.slider-fullscreen4_dark
+	.overlay
+		background-color: $dark
+	.slider-fullscreen4__slide-header
+		color: $white
+.slider-fullscreen4__slide-wrapper-bg
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+	overflow: hidden
+	&:hover
+		.slider-fullscreen4__slide-bg
+			transform: scale(1)
+		.slider-fullscreen4__slide-overlay
+			opacity: 0
+		.slider-fullscreen4__slide-header
+			opacity: 0
+			visibility: hidden
+			transform: translateY(-100%)
+			transition-delay: 0ms
+		.slider-fullscreen4__slide-button
+			opacity: 1
+			visibility: visible
+			transform: translateY(0%)
+			transition-delay: 100ms
+.slider-fullscreen4__slide-bg
+	+trans1
+	transform: scale(1.1)
+.slider-fullscreen4__slide-overlay
+	+trans1
+.slider-fullscreen4__slide-header
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	transform: translateY(-50%)
+	z-index: 50
+	text-align: center
+	padding: 50px
+	+trans1
+	transition-delay: 100ms
+	h2
+		line-height: 1.3
+		margin-top: 0
+		margin-bottom: 0
+.slider-fullscreen4__slide-headline
+	display: inline-block
+	width: 50px
+	height: 1px
+	background-color: $pale-brown
+	margin-bottom: 20px
+.slider-fullscreen4__slide-button
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	z-index: 50
+	font-size: 36px
+	width: 100px
+	height: 100px
+	transform: translateY(50%)
+	opacity: 0
+	visibility: hidden
+	+trans1
+	transition-delay: 0ms
+
+@media only screen and (max-width: 991px)
+	.slider-fullscreen4__slide-bg
+		height: 80vh
+	.slider-fullscreen4__slide-button
+		width: 54px
+		height: 54px
+		font-size: 20px
+	.slider-fullscreen4__slide-headline
+		margin-bottom: 10px
+	.slider-fullscreen4__slide-overlay
+		opacity: .9

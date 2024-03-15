@@ -1,0 +1,75 @@
+.figure-pricing
+	display: flex
+	flex-direction: column
+	text-align: center
+	padding: 40px 50px
+	border: 1px solid $borders
+	position: relative
+	height: 100%
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 5px
+		right: 5px
+		bottom: 5px
+		left: 5px
+		border: 1px solid $borders
+.figure-pricing_featured
+	background-color: $dark
+	color: $white
+	border-color: transparent
+	&:before
+		border-color: $pale-brown
+.figure-pricing__header
+	h3
+		margin-top: 15px
+		margin-bottom: 0
+.figure-pricing__line
+	display: inline-block
+	width: 30px
+	height: 1px
+	background-color: $pale-brown
+.figure-pricing__cost
+	color: $pale-brown
+	margin-top: 34px
+.figure-pricing__amount
+	font-size: 60px
+	line-height: 1
+	font-weight: 300
+	position: relative
+	display: inline-block
+.figure-pricing__cost-sign
+	display: inline-block
+	position: absolute
+	font-size: 18px
+	line-height: 1
+	top: 50%
+	transform: translateY(-50%)
+.figure-pricing__cost-sign_before
+	right: calc(100% + 12px)
+.figure-pricing__cost-sign_after
+	left: calc(100% + 12px)
+.figure-pricing__label
+	margin-top: 6px
+.figure-pricing__features
+	+reset-ul
+	margin-top: 20px
+	margin-bottom: 30px
+.figure-pricing__feature
+	display: block
+	margin-top: 12px
+	margin-bottom: 12px
+.figure-pricing__wrapper-button
+	margin-top: auto
+
+@media only screen and (max-width: 991px)
+	.figure-pricing
+		padding: 30px 30px
+	.figure-pricing__header h3
+		margin-top: 5px
+	.figure-pricing__cost
+		margin-top: 14px
+	.figure-pricing__features
+		margin-top: 10px
+		margin-bottom: 15px

@@ -1,0 +1,38 @@
+.section-info__quote
+	h2
+		margin-top: 0
+		margin-bottom: 36px
+		color: $brown-grey
+		&:last-of-type
+			margin-bottom: 0
+.section-info__quote-author
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: 18px
+	font-weight: 600
+	margin-top: 36px
+.section-info__quote-line
+	width: 100px
+	height: 1px
+	background-color: $pale-brown
+.section-info__bg
+	width: 100%
+	height: 800px
+	margin-top: 80px
+
+@media only screen and (max-width: 1400px)
+	.section-info__bg
+		height: 500px
+
+@media only screen and (max-width: 991px)
+	.section-info__quote
+		h2
+			font-size: 22px
+	.section-info__quote-author
+		font-size: 14px
+		margin-top: 24px
+	.section-info__quote-line
+		width: 50px
+	.section-info__bg
+		margin-top: 50px

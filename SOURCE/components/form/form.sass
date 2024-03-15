@@ -1,0 +1,117 @@
+.form
+	width: 100%
+	h3
+		margin-top: 0
+.form__submit
+	margin-top: 10px
+.form__col
+	margin-top: 15px
+	margin-bottom: 15px
+.form__col_submit
+	margin-top: 30px
+	margin-bottom: 0
+.form__error
+	display: block
+	font-size: 12px
+	color: red
+	text-align: left
+	margin-top: 4px
+
+@media only screen and (max-width: 991px)
+	.form__col_submit
+		text-align: left
+
+hr
+	height: 0
+	border: 1px solid $borders
+	margin-top: 1rem
+	margin-bottom: 1rem
+
+.input-float
+	position: relative
+	display: block
+	width: 100%
+	margin-bottom: 0
+.input-float__label
+	position: absolute
+	top: 10px
+	left: 0
+	margin: auto
+	display: block
+	font-size: rem(14px)
+	font-weight: 600
+	@include trans1
+	transform-origin: left center
+	cursor: text
+	color: $brown-grey
+.input-float__input
+	display: block
+	width: 100%
+	width: 100%
+	border-bottom: 1px solid $borders
+	border-top: none
+	border-right: none
+	border-left: none
+	outline: none
+	padding: 12px 0 8px
+	+trans1
+	// line-height: 1.2
+	background-color: transparent
+	border-radius: 0
+	color: inherit
+.input-float__input_textarea
+	resize: none
+	min-height: 100px
+
+.input-float__input_focused, .input-float__input_not-empty
+	+ .input-float__label
+		transform: scale(0.8571) translateY(-1.7rem)
+
+.input-float__input_focused
+	border-color: $pale-brown
+	+ .input-float__label
+		color: $pale-brown
+
+.input-float__input_not-empty
+	border-color: $borders
+	+ .input-float__label
+		color: $brown-grey
+
+.input-search__input
+	padding-right: 30px
+.input-search__submit
+	display: inline-block
+	font-size: 24px
+	width: 24px
+	height: 24px
+	padding: 0
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+	background: transparent
+	border: none
+	color: $brown-grey
+	outline: none
+	+trans1
+	cursor: pointer
+	&:hover
+		color: $pale-brown
+	&:focus
+		outline: none
+
+select
+	display: block
+	border: 1px solid $borders
+	padding: 10px 35px 10px 15px
+	background-color: transparent
+	outline: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	color: $brown-grey
+	background-image: url('../img/general/select.png')
+	background-position: right 15px bottom 50%
+	background-repeat: no-repeat
+	background-size: 6px 4px

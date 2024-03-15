@@ -1,0 +1,104 @@
+.button
+	position: relative
+	display: inline-block
+	+small-caps
+	padding: 20px 40px
+	text-align: center
+	overflow: hidden
+	cursor: pointer
+	color: $pale-brown
+	border: 2px solid $pale-brown
+	&:before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 0
+		bottom: 0
+		left: 0
+		background-color: $pale-brown
+		+trans1
+		z-index: 0
+	&:focus
+		color: $pale-brown
+		outline: none
+	&:hover
+		color: $white
+		&:before
+			top: 0
+			height: 100%
+	span
+		position: relative
+		display: inline-block
+		z-index: 50
+.button_accent
+	background-color: $pale-brown
+	color: $white
+	&:before
+		background-color: $mocha
+	&:focus
+		color: $white
+	&:hover
+		border-color: $mocha
+.button_fullwidth
+	width: 100%
+.button-square
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	+material-icons
+	width: 64px
+	height: 64px
+	text-transform: none
+	padding: 0
+	font-size: 20px
+	font-weight: normal
+	border: 1px solid $borders
+	cursor: pointer
+	svg
+		display: block
+		position: absolute
+		top: -1px
+		left: -1px
+		width: calc(100% + 2px)
+		height: calc(100% + 2px)
+		stroke: $pale-brown
+		stroke-width: 4px
+.button-close
+	display: block
+	position: relative
+	width: 60px
+	height: 60px
+	&:hover
+		.button-close__line
+			background-color: $mocha
+			&:nth-of-type(1)
+				transform: rotate(-45deg)
+			&:nth-of-type(2)
+				transform: rotate(-135deg)
+.button-close__line
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	width: 100%
+	height: 2px
+	background-color: $pale-brown
+	cursor: pointer
+	+trans1
+	&:nth-of-type(1)
+		transform: rotate(45deg)
+	&:nth-of-type(2)
+		transform: rotate(-45deg)
+		transition-delay: 40ms
+
+@media only screen and (max-width: 991px)
+	.button
+		padding: 15px 30px
+	.button-close
+		width: 35px
+		height: 35px
+	.button-square
+		width: 48px
+		height: 48px
+		font-size: 16px

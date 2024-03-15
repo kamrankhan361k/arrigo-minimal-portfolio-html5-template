@@ -1,0 +1,85 @@
+.figure-service
+	position: relative
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	height: 540px
+	background-color: $dark
+	color: $white
+	padding: 80px 50px
+	text-align: center
+	+trans1
+	&:hover
+		background-color: $black
+		color: $white
+		.figure-service__icon
+			color: $pale-brown
+		h3
+			color: $pale-brown
+	&:after
+		content: ''
+		width: 1px
+		height: 100%
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		display: block
+		background-color: $borders
+.figure-service__number
+	display: inline-block
+	+small-caps
+	position: absolute
+	top: 44%
+	left: 50%
+	transform: translate(-50%, -44%)
+	color: $brown-grey
+.figure-service__header
+	width: 100%
+	h3
+		+trans1
+.figure-service__headline
+	display: inline-block
+	width: 30px
+	height: 1px
+	background-color: $pale-brown
+.figure-service__icon
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	width: 148px
+	height: 148px
+	border-radius: 100%
+	border: 1px solid $borders
+	color: $brownish-grey
+	font-size: 48px
+	margin-top: auto
+	svg
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		margin: auto
+		width: 150px
+		height: 150px
+		stroke: $borders
+		stroke-width: 1px
+		z-index: 50
+
+@media only screen and (max-width: 1400px)
+	.figure-service
+		height: 500px
+		padding: 30px 30px 30px
+
+@media only screen and (max-width: 991px)
+	.figure-service
+		height: 400px
+	.figure-service__icon
+		width: 98px
+		height: 98px
+		font-size: 36px
+		svg
+			width: 100px
+			height: 100px

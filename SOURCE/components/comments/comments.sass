@@ -1,0 +1,70 @@
+.comments-area, .comment-respond
+	h2
+		font-size: 24px
+		font-weight: 600
+		line-height: 1.5
+		margin-top: 0
+		margin-bottom: 10px
+.comment-list
+	+reset-ul
+	li
+		padding-top: 30px
+		padding-bottom: 30px
+	> li:not(:last-child)
+		border-bottom: 1px solid $borders
+	ol
+		+reset-ul
+		padding-left: 4%
+		li:last-child
+			padding-bottom: 0
+.comment-author
+	display: inline-block
+	.avatar
+		position: relative
+		width: 100%
+		max-width: 80px
+		max-height: 80px
+		border-radius: 100%
+		margin-right: 20px
+.comment-meta
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 12px
+.comment-metadata
+	+small-caps
+	margin-left: 5px
+	a
+		color: $brown-grey
+		&:hover
+			color: $mocha
+.comment-body
+	display: flex
+	.fn
+		font-size: 18px
+		font-weight: 300
+		line-height: 1.44
+		color: $dark
+		a
+			color: $dark
+			&:hover
+				color: $mocha	
+.comment-author
+	flex: 0 0 auto
+.comment-content
+	width: 100%
+	p
+		color: $brownish-grey
+		margin-top: 0
+		margin-bottom: 0
+.reply
+	margin-top: 10px
+.comment-reply-link
+	+small-caps
+	&:before
+		content: 'reply'
+		+material-icons
+		text-transform: none
+		margin-right: 8px
+.comment-respond
+	margin-top: 20px

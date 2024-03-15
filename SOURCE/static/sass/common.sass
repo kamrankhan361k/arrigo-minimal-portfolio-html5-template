@@ -1,0 +1,267 @@
+html
+	font-size: $em-base
+	-webkit-font-smoothing: antialiased
+	text-rendering: optimizeLegibility
+body
+	position: relative
+	width: 100%
+	min-width: 320px
+	color: $dark
+	font-family: $font-primary
+	font-size: 100%
+	line-height: 1.71
+img
+	max-width: 100%
+	height: auto
+a
+	+trans1
+	color: $pale-brown
+	&:hover, &:focus
+		text-decoration: none
+		color: $mocha
+	&:focus
+		outline: none
+.color-white
+	color: $white
+.color-accent
+	color: $pale-brown
+.container-fluid
+	padding-left: 80px
+	padding-right: 80px
+.container_25
+	padding-left: 25px
+	padding-right: 25px
+	.row
+		margin-left: -25px
+		margin-right: -25px
+		[class*=col-]
+			padding-right: 25px
+			padding-left: 25px
+.highlight
+	overflow: hidden
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	z-index: 50
+.highlight__bg
+	display: block
+	background-color: $pale-brown
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: -1
+
+.bg-light
+	background-color: $light
+.bg-dark
+	background-color: $dark
+.bg-black
+	background-color: $black
+.bg-white
+	background-color: $white
+.bg-accent
+	background-color: $pale-brown
+
+h1
+	font-size: 48px
+	font-weight: 300
+	line-height: 1.5
+	margin-top: 36px
+	margin-bottom: 36px
+h2
+	font-size: 36px
+	font-weight: 300
+	line-height: 1.5
+	margin-top: 24px
+	margin-bottom: 24px
+h3
+	font-size: 24px
+	font-weight: 600
+	line-height: 1.5
+	margin-top: 16px
+	margin-bottom: 16px
+h4
+	font-size: 18px
+	font-weight: 300
+	line-height: 1.44
+	margin-top: 8px
+	margin-bottom: 8px
+h5
+	font-size: 14px
+	font-weight: bold
+	margin-top: 0
+	margin-bottom: 0
+h6
+	font-size: 14px
+	font-weight: 300
+	letter-spacing: 1px
+	margin-top: 0
+	margin-bottom: 0
+	text-transform: uppercase
+p
+	margin-top: 24px
+	margin-bottom: 24px
+blockquote
+	background-color: $light
+	padding: 50px
+	margin-top: 36px
+	margin-bottom: 36px
+	p
+		font-size: 18px
+		line-height: 1.5556
+		font-style: italic
+		color: $brownish-grey
+		margin-top: 0
+		margin-bottom: 0
+		&:before, &:after
+			color: $pale-brown
+			font-weight: 600
+		&:before
+			content: '“ '
+		&:after
+			content: ' ”'
+	cite
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-style: normal
+		font-size: 14px
+		font-weight: 600
+		margin-top: 20px
+		&:before
+			content: ''
+			display: block
+			width: 50px
+			height: 1px
+			background-color: $pale-brown
+			margin-right: 15px
+
+.text-left
+	text-align: left !important
+.text-center
+	text-align: center !important
+.text-right
+	text-align: right !important
+.row-80
+	margin-left: -40px
+	margin-right: -40px
+.overflow
+	position: relative
+	overflow: hidden
+.overflow__curtain
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 50
+.overflow__content
+	width: 100%
+	height: 100%
+.position-relative
+	position: relative
+
+.of-cover
+	width: 100%
+	height: 100%
+	object-fit: cover
+	font-family: 'object-fit: cover;'
+.of-contain
+	width: 100%
+	height: 100%
+	object-fit: contain
+	font-family: 'object-fit: contain;'
+
+.split-line
+	overflow: hidden
+
+.jarallax
+	position: relative
+	z-index: 0
+.jarallax > .jarallax-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+.img-fullwidth
+	width: 100%
+	max-width: 100%
+	height: auto
+
+@media only screen and (max-width: 1400px)
+	.container-fluid
+		padding-left: 50px
+		padding-right: 50px
+	.container_25
+		padding-left: 25px
+		padding-right: 25px
+		.row
+			margin-left: -25px
+			margin-right: -25px
+			[class*=col-]
+				padding-right: 25px
+				padding-left: 25px
+	.row-80
+		margin-left: -25px
+		margin-right: -25px
+	h1
+		font-size: 40px
+		margin-top: 28px
+		margin-bottom: 28px
+	h2
+		font-size: 28px
+		margin-top: 16px
+		margin-bottom: 16px
+	h3
+		font-size: 22px
+		margin-top: 12px
+		margin-bottom: 12px
+	h4
+		font-size: 16px
+		margin-top: 8px
+		margin-bottom: 8px
+	h5
+		font-size: 14px
+	h6
+		font-size: 14px
+
+@media only screen and (max-width: 991px)
+	.container-fluid
+		padding-left: 15px
+		padding-right: 15px
+	.container_25
+		padding-left: 15px
+		padding-right: 15px
+		.row
+			margin-left: -15px
+			margin-right: -15px
+			[class*=col-]
+				padding-right: 15px
+				padding-left: 15px
+	.row-80
+		margin-left: -15px
+		margin-right: -15px
+	h1
+		font-size: 34px
+		margin-top: 20px
+		margin-bottom: 20px
+	h2
+		font-size: 26px
+		margin-top: 16px
+		margin-bottom: 16px
+	h3
+		font-size: 20px
+		margin-top: 12px
+		margin-bottom: 12px
+	h4
+		font-size: 16px
+		margin-top: 8px
+		margin-bottom: 8px
+	h5
+		font-size: 14px
+	h6
+		font-size: 14px

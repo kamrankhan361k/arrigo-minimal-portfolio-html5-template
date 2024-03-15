@@ -1,0 +1,86 @@
+.section-cta
+	&.section_pt
+		padding-top: 300px
+	&.section_pb
+		padding-bottom: 300px
+.section-cta__header
+	position: relative
+	z-index: 50
+	h2
+		font-size: 48px
+		font-weight: 300
+		line-height: 1.25
+		margin-top: 0
+		margin-bottom: 36px
+	h4
+		margin-top: 0
+		margin-bottom: 16px
+.section-cta__headline
+	position: absolute
+	top: 24px
+	left: -130px
+	width: 100px
+	height: 1px
+	background-color: $pale-brown
+.section-cta__wrapper-button
+	position: relative
+	z-index: 50
+	margin-top: 60px
+.section-cta__decor-el-1
+	position: absolute
+	top: 16%
+	left: 0
+	right: 0
+	margin: auto
+	width: 20px
+	height: 20px
+	background-color: $pale-brown
+	z-index: 50
+.section-cta__decor-el-2
+	position: absolute
+	bottom: 0
+	left: 33vw
+	right: 0
+	margin: auto
+	z-index: 50
+	background-color: $borders
+	width: 1px
+	height: 150px
+	transform: skew(-45deg)
+.section-cta__bg
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	padding: 0
+	z-index: -1
+
+@media only screen and (max-width: 1580px)
+	.section-cta__headline
+		display: none
+
+@media only screen and (max-width: 1400px)
+	.section-cta
+		&.section_pt
+			padding-top: 150px
+		&.section_pb
+			padding-bottom: 150px
+	.section-cta__header
+		h2
+			font-size: 36px
+			margin-bottom: 24px
+
+@media only screen and (max-width: 991px)
+	.section-cta
+		text-align: center
+	.section-cta
+		&.section_pt
+			padding-top: 80px
+		&.section_pb
+			padding-bottom: 80px
+	.section-cta__header
+		h2
+			font-size: 28px
+	.section-cta__wrapper-button
+		margin-top: 36px
